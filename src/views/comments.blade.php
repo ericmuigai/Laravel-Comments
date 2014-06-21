@@ -34,10 +34,10 @@
 
 		<p class="comments--login--required">
 			{{ trans('laravel-comments::messages.login_required') }}
-			<a href="{{ action('UserController@showLogin') }}?return={{ urlencode(Request::url()) }}" class="btn">
+			<a href="{{ URL::to('user/login') }}?return={{ urlencode(Request::url()) }}" class="btn">
 				{{ trans('laravel-comments::messages.login_btn_text') }}
 			</a>
-			<a href="{{ action('UserController@showRegister') }}?return={{ urlencode(Request::url()) }}" class="btn">
+			<a href="{{ URL::to('user/register') }}?return={{ urlencode(Request::url()) }}" class="btn">
 				{{ trans('laravel-comments::messages.register_btn_text') }}
 			</a>
 		</p>
