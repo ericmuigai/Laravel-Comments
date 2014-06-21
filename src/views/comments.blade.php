@@ -26,7 +26,7 @@
 		</p>
 	@endif
 
-	@if (Auth::check())
+	@if (Sentry::check())
 
 		@include ('laravel-comments::form')
 
