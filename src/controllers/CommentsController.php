@@ -60,7 +60,7 @@ class CommentsController extends \BaseController {
 				'commentable_type' => $commentableType,
 				'commentable_id' => $commentableId,
 				'comment' => Input::get('comment'),
-				'user_id' => Auth::user()->id,
+				'user_id' => Sentry::user()->id,
 			);
 			$rules = $this->comment->getRules($commentableType);
 			$validator = Validator::make($data, $rules);
